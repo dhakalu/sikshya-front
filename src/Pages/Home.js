@@ -8,9 +8,8 @@ import Header from '../Components/navigation/Header'
 
 const Home = props => {
   return (
-    <>
+    <div>
       <HomeWrapper>
-        <Header />
         <div className='content'>
           <div className='mission'>
             <ChatBotPreview />
@@ -19,7 +18,7 @@ const Home = props => {
       </HomeWrapper>
       <SikshyaBot />
 
-    </>
+    </div>
   )
 }
 
@@ -36,17 +35,7 @@ const HomeWrapper = styled.div`
     .margin-vertical-30 {
       margin: 30px 0;
     }
-    .header {
-      display: flex;
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      justify-content: space-between;
-      background-color: #fff;
-      border-box: 0 1px 2px #ccc;
-      height: ${NAV_BAR_HEIGHT};
-      align-items: center;
-    }
+    
 
     .content {
       margin-top: ${NAV_BAR_HEIGHT};

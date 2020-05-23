@@ -1,8 +1,5 @@
-import React from 'react'
 import Routes from './routes'
-
-const App = (props) => {
-  return <Routes />
-}
+import withLogin from './Components/hoc/withLogin'
+const App = withLogin(Routes, true)
 
 export default App

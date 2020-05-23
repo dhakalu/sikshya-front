@@ -3,12 +3,15 @@ import React, { Suspense, lazy } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
+import withSidebar from './Components/hoc/page/withSidebar'
 
 const Home = lazy(() => import('./Pages/Home'))
-const BrowseSchools = lazy(() => import('./Pages/BrowseSchools'))
+
+const BrowseSchoolsPage = lazy(() => import('./Pages/BrowseSchools'))
+const BrowseSchools = withSidebar(BrowseSchoolsPage)
+
 const SchoolDetails = lazy(() => import('./Pages/SchoolDetails'))
 
 const Routes = (props) => {

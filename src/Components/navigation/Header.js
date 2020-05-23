@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import HeaderWrapper from './HeaderWrapper.styles'
 
 Header.propTypes = {
 
@@ -9,9 +10,9 @@ function Header (props) {
   const header = 'Sikshya'
 
   return (
-    <div className='header'>
+    <HeaderWrapper>
       {header}
-    </div>
+    </HeaderWrapper>
   )
 }
 

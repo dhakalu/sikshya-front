@@ -70,6 +70,7 @@ describe('isEmpty', () => {
   })
 
   test('it throws exception when non string objects are passed like integer, float', () => {
+    expect(() => isEmpty('')).not.toThrowError('input must be a string')
     expect(() => isEmpty(9)).toThrowError('input must be a string')
     expect(() => isEmpty(9.00)).toThrowError('input must be a string')
     expect(() => isEmpty({})).toThrowError('input must be a string')

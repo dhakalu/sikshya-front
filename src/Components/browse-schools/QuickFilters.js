@@ -39,7 +39,7 @@ const FilterButton = styled.button`
     border-radius: 13px;
     height: 26px;
     padding: 5px 20px;
-    margin: 10px 20px;
+    margin: 10px 10px;
     outline: none;
     ${props => props.selected && 'background-color: green'};
     ${props => props.selected && 'color: white'};

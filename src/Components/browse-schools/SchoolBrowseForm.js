@@ -7,7 +7,7 @@ const SchoolBrowseForm = props => {
     onBrowse = false
   } = props
   return (
-    <div style={{ display: 'flex', flex: 1, justifyContent: 'center', padding: 30, flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'flex-start' }}>
       {/* Todo  */}
       <QuickFilters />
     </div>

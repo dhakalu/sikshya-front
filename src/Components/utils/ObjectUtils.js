@@ -10,3 +10,7 @@ export const isEmpty = (obj) => {
 export const getKeys = (obj) => {
   return Object.keys(obj)
 }
+
+export const hasKey = (object, key) => {
+  return key in object
+}

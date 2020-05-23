@@ -20,8 +20,8 @@ const validForm = {
   password: 'password'
 }
 
-const INVALID_USERNAME_ERROR_MESSAGE = 'Must provide a valid username'
-const INVALID_PASSWORD_ERROR_MESSAGE = 'Must provide a valid password'
+const INVALID_USERNAME_ERROR_MESSAGE = 'Please provide a valid username'
+const INVALID_PASSWORD_ERROR_MESSAGE = 'Please provide a valid password'
 const validators = {
   username: (username) => ({
     isValid: !isEmpty(username),
