@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const MultipleChoiceQuestion = props => {
   const classess = useStyles()
 
-  const { type, questionId, onUpdate = () => false, answer = '' } = props
+  const { type, questionId, onUpdate = () => false } = props
 
   const isSingle = type === 'single'
 

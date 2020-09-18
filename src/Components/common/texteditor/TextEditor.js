@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const TextEditor = (props) => {
   const { questionId, answer, onUpdate = () => false, category, points, description, placeholder = 'Type your response here' } = props
-  const [editorState, setEditorState] = useState(answer ? convertFromRaw(answer) : undefined)
+  const [, setEditorState] = useState(answer ? convertFromRaw(answer) : undefined)
 
   const onContentStateChange = (state) => {
     setEditorState(state)

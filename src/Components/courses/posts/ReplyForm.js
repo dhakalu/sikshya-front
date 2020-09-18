@@ -9,11 +9,7 @@ const ProfilePic = styled(Avatar)({
   marginRight: 10
 })
 
-
 const ReplyForm = props => {
-  const {
-    content = ''
-  } = props
 
   return (
     <PaddingAdder>

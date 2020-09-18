@@ -18,8 +18,6 @@ const BrowseSchools = withSidebar(BrowseSchoolsPage)
 
 const SchoolDetails = lazy(() => import('./Pages/SchoolDetails'))
 
-const MyCourses = lazy(() => import('./Components/student-dashboard/MyCourses'))
-
 const Course = lazy(() => import('./Pages/Course'))
 
 const Routes = (props) => {

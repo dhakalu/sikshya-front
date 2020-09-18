@@ -26,7 +26,7 @@ const MultipleChoiceQuestionEditor = props => {
 
   useEffect(() => {
     setDirtyOptions(options)
-  }, [options.length])
+  }, [options])
 
   useEffect(() => {
     setDirtyDescription(description)

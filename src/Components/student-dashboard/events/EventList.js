@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Event from './Event'
 import Grid from '@material-ui/core/Grid'
 import Fab from '@material-ui/core/Fab'

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import SikshyaBot from '../Components/chat-bot'
 
 import { thinScrollBar } from '../Components/utils/ScrollableAreas'
 import ChatBotPreview from '../Components/home/ChatBotPreview'

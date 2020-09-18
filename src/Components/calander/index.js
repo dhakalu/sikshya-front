@@ -1,4 +1,3 @@
-import Day from './Day'
 import React from 'react'
 import DataTable from '../common/table/DataTable'
 

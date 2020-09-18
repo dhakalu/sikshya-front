@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import QuickFilters from './QuickFilters'
 
 const SchoolBrowseForm = props => {
-  const {
-    onBrowse = false
-  } = props
+
   return (
     <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'flex-start' }}>
       {/* Todo  */}

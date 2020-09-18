@@ -1,6 +1,4 @@
-import React, { useState, createContext, useContext } from 'react'
-import Header from '../navigation/Header'
-import ContentWrapper from './ContentWrapper.styles'
+import React, { useState, createContext } from 'react'
 import LoginPage from '../../Pages/LoginPage'
 import { isEmpty } from '../utils/ObjectUtils'
 import withPage from './page'

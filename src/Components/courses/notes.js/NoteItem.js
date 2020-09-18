@@ -1,8 +1,5 @@
-
 import React from 'react'
-import styled from 'styled-components'
-import { IconButton, Card, CardContent, makeStyles, CardActions, CardHeader } from '@material-ui/core'
-import Flip from '@material-ui/icons/Flip'
+import { IconButton, Card, CardContent, makeStyles, CardHeader } from '@material-ui/core'
 import MoreVert from '@material-ui/icons/MoreVert'
 
 const useStyles = makeStyles({

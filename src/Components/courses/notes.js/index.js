@@ -1,27 +1,11 @@
 import React, { useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import IconButton from '@material-ui/core/IconButton'
-import NoteAddRounded from '@material-ui/icons/NoteAddRounded'
 import { Typography, Button } from '@material-ui/core'
-
 import { Switch, Route, useRouteMatch, useHistory } from 'react-router-dom'
 import CreateNoteForm from './CreateNoteForm'
 import PaddingAdder from '../../common/PaddingAdder.styles'
 const { default: NotesGrid } = require('./NotesGrid')
-const { default: SpeedDials } = require('../../common/sppeddial/SpeedDial')
-
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-    position: 'fixed',
-    bottom: 30,
-    right: 30,
-    backhround: 'red'
-  }
-}))
 
 const Notes = () => {
-  const classes = useStyles()
 
   const match = useRouteMatch('/courses/:courseId')
 

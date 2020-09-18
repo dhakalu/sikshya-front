@@ -41,10 +41,6 @@ const DataTable = (props) => {
     onClickRow = null
   } = props
 
-  const handleRecordSelect = (record) => {
-
-  }
-
   return (
     <Paper elevation={0} square>
       <TableContainer>

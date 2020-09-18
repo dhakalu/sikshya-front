@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { BreadcrumContext } from '../../hoc/withBreadCrum'
 import PaddingAdder from '../../common/PaddingAdder.styles'
 import Post from '../posts/Post'
@@ -25,7 +24,7 @@ const DiscussionDetails = ({
 
   useEffect(() => {
     setLinks(bredcrumLinks)
-  }, [])
+  }, [setLinks])
 
   return (
     <Box display='flex' justifyContent='center'>

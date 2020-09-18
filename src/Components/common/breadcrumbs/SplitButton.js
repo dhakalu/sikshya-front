@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
@@ -14,10 +13,10 @@ import MenuList from '@material-ui/core/MenuList'
 const SplitButton = ({ label, options, onChange }) => {
   const [open, setOpen] = React.useState(false)
   const anchorRef = React.useRef(null)
-  const [selectedIndex, setSelectedIndex] = React.useState(1)
+  // const [selectedIndex, setSelectedIndex] = React.useState(1)
 
   const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`)
+    // console.info(`You clicked ${options[selectedIndex]}`)
     setOpen(false)
   }
 

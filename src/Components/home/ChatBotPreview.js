@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import PropTypes from 'prop-types'
 import Typography from '@material-ui/core/Typography'
 import chatbotImage from '../../images/chatbot.jpg'
 import { useHistory } from 'react-router-dom';
@@ -43,7 +42,7 @@ const ChatBotPreview = memo((props) => {
         </div>
       </div>
       <div>
-        <img src={chatbotImage} />
+        <img src={chatbotImage} alt='chat-bot' />
       </div>
     </div>
   )

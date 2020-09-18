@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { BreadcrumContext } from '../../hoc/withBreadCrum'
 import PaddingAdder from '../../common/PaddingAdder.styles'
 import AssignmentForm from './AssignmentForm'
@@ -88,7 +87,7 @@ const AssignmentDetail = props => {
 
   useEffect(() => {
     setLinks(bredcrumLinks)
-  }, [])
+  }, [setLinks])
 
   return (
     <PaddingAdder>

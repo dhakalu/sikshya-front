@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import TextEditor from '../../../common/texteditor/TextEditor'
 import { Paper } from '@material-ui/core'
 
