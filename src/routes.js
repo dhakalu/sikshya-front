@@ -5,7 +5,11 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+
 import withSidebar from './Components/hoc/page/withSidebar'
+import Header from './Components/navigation/Header'
+import StudentDashboard from './Pages/StudentDashboard'
+import TeacherRoutes from './teacherRoutes'
 
 const Home = lazy(() => import('./Pages/Home'))
 
@@ -14,9 +18,14 @@ const BrowseSchools = withSidebar(BrowseSchoolsPage)
 
 const SchoolDetails = lazy(() => import('./Pages/SchoolDetails'))
 
+const MyCourses = lazy(() => import('./Components/student-dashboard/MyCourses'))
+
+const Course = lazy(() => import('./Pages/Course'))
+
 const Routes = (props) => {
   return (
     <Router>
+      <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route path='/browse/:schoolId'>
@@ -24,6 +33,15 @@ const Routes = (props) => {
           </Route>
           <Route path='/browse'>
             <BrowseSchools />
+          </Route>
+          <Route path='/courses/:courseId'>
+            <Course matchingPath={'/courses/:courseId'}/>
+          </Route>
+          <Route path='/dashboard'>
+            <StudentDashboard />
+          </Route>
+          <Route path='/teacher'>
+            <TeacherRoutes />
           </Route>
           <Route path='/'>
             <Home />

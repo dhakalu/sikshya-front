@@ -15,12 +15,7 @@ export const LoggedInUserContext = createContext(initialLoggedInUser)
  */
 export const withLogin = (WrappedPage, showLoginPage) => {
   return () => {
-    const [user, setUser] = useState({})
-
-    const onLogin = (onSuccess, onFail) => {
-      if (onSuccess) onSuccess()
-      if (onFail) onFail()
-    }
+    const [user, setUser] = useState({username: 'demo'})
 
     const updateUser = (user) => {
       setUser(user)
@@ -29,7 +24,7 @@ export const withLogin = (WrappedPage, showLoginPage) => {
     const Content = withPage(WrappedPage)
 
     return (
-      <LoggedInUserContext.Provider value={{ user, setUser: (user) => updateUser(user), onLogin }}>
+      <LoggedInUserContext.Provider value={{ user, setUser: (user) => updateUser(user) }}>
         {
           isEmpty(user) && showLoginPage ? <LoginPage /> : (
             <Content />

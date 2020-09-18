@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 import ZIndex from '../utils/ZIndex'
 
-const NAV_BAR_HEIGHT = '50px'
+const NAV_BAR_HEIGHT = '65px'
 
 const HeaderWrapper = styled.div`
-    display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100vw;
-    justify-content: space-between;
-    background-color: #fff;
-    border-box: 0 1px 2px #ccc;
-    height: ${NAV_BAR_HEIGHT};
-    align-items: center;
+    left: 0;
     ${ZIndex.navigationBar};
+
+    a {
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.1em;
+    }
 `
 
 export default HeaderWrapper

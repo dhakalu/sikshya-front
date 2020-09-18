@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import SchoolHeader from './SchoolHeader'
 import SchoolNav from '../Components/school-detail/SchoolNav'
 import styled from 'styled-components'
+import withChatBot from '../Components/hoc/withChatBot'
 
 const SchoolDetails = props => {
   const {
@@ -23,7 +24,7 @@ SchoolDetails.propTypes = {
   name: PropTypes.string.isRequired
 }
 
-export default SchoolDetails
+export default withChatBot(SchoolDetails)
 
 const SchoolDetailsWrapper = styled.div`
     display: flex;

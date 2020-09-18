@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const WhiteSpace = styled.div`
-    margin: ${({ height }) => height || 10}px;
+    min-height: ${({ height }) => height || 10}px;
 `
 
 WhiteSpace.propTypes = {

@@ -4,7 +4,7 @@ import SikshyaBot from '../Components/chat-bot'
 
 import { thinScrollBar } from '../Components/utils/ScrollableAreas'
 import ChatBotPreview from '../Components/home/ChatBotPreview'
-import Header from '../Components/navigation/Header'
+import withChatBot from '../Components/hoc/withChatBot'
 
 const Home = props => {
   return (
@@ -16,13 +16,11 @@ const Home = props => {
           </div>
         </div>
       </HomeWrapper>
-      <SikshyaBot />
-
     </div>
   )
 }
 
-export default Home
+export default withChatBot(Home)
 
 const NAV_BAR_HEIGHT = '50px'
 const HomeWrapper = styled.div`

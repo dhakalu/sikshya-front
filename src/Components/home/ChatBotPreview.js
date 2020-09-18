@@ -4,14 +4,13 @@ import Typography from '@material-ui/core/Typography'
 import chatbotImage from '../../images/chatbot.jpg'
 import { useHistory } from 'react-router-dom';
 
-
 const ChatBotPreview = memo((props) => {
   const chatBotCommands = [{
     name: 'login',
     path: 'login'
   },
-  { name: 'Show me schools around me', path: 'browse' },
-  { name: 'show my classes' },
+  { name: 'Show me schools around me', path: '/browse' },
+  { name: 'show my courses', path: '/dashboard/courses' },
   { name: 'show my assignments' },
   { name: 'show my grades' },
   { name: 'schedule an event' },

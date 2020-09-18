@@ -3,6 +3,7 @@ import SchoolsGrid from '../Components/browse-schools/SchoolsGrid'
 import styled from 'styled-components'
 import SchoolBrowseForm from '../Components/browse-schools/SchoolBrowseForm'
 import { getFakeSchools } from '../datastubs/schools-faker'
+import withChatBot from '../Components/hoc/withChatBot'
 
 const createData = (id, name, coverImage = 'https://via.placeholder.com/150', pitch, location) => ({ id, name, coverImage, pitch, location })
 
@@ -22,7 +23,7 @@ const SchoolPage = (props) => {
   )
 }
 
-export default SchoolPage
+export default withChatBot(SchoolPage)
 
 const SchoolPageWrapper = styled.div`
   display: flex;

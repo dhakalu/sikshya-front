@@ -75,27 +75,29 @@ const ChatMinimizedWindow = props => {
 
   return (
     <ChatWindowWrapper>
-      <div className='header'>
-        <div className='room-title'>
-          <Avatar />
-          <Typography className={classes.header}>Sikshya Bot</Typography>
+      <div className='content'>
+        <div className='header'>
+          <div className='room-title'>
+            <Avatar />
+            <Typography className={classes.header}>Sikshya Bot</Typography>
+          </div>
+          <div className='close'>
+            <IconButton onClick={() => onClose()}>
+              <CloseIcon />
+            </IconButton>
+          </div>
         </div>
-        <div className='close'>
-          <IconButton onClick={() => onClose()}>
-            <CloseIcon />
-          </IconButton>
+        <div className='chat-messages'>
+          {
+            messages.map((message, i) => (<Message key={i} {...message} />))
+          }
+          <div
+            style={{ float: 'left', clear: 'both' }}
+            ref={someRef}
+          />
         </div>
+        <Form onSendMessage={handleSend} />
       </div>
-      <div className='chat-messages'>
-        {
-          messages.map((message, i) => (<Message key={i} {...message} />))
-        }
-        <div
-          style={{ float: 'left', clear: 'both' }}
-          ref={someRef}
-        />
-      </div>
-      <Form onSendMessage={handleSend} />
     </ChatWindowWrapper>
   )
 }
@@ -115,34 +117,38 @@ const ChatWindowWrapper = styled.div`
     overflow: auto;
     z-index: 10;
     border-radius: 17px;
-    position: relative;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 0px 1px 1px #ccc;
+    .content {
+      position: relative;
+    }
 
-    .header {
-        position: absolute;
-        top: 10px;
+    .content .header {
         height: 50px;
-        width: 400px;
+        padding: 10px;
         display: flex;
         box-shadow: 0 1px 2px #ccc;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .room-title {
+    .content .room-title {
         display: flex;
         padding: 0 10px;
     }
 
-    .chat-messages {
+    .content .chat-messages {
         overflow: auto;
         max-height: 370px;
         margin-top: 65px;
         padding: 7px 10px;
     }
 
-    .input-wrapper{
+    .content .input-wrapper{
         position: absolute;
-        bottom: 0px;        
+        bottom: -345px;        
         width: 380px;
     }
 

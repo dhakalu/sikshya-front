@@ -6,7 +6,6 @@ const withPage = (WrappedContant) => {
   return () => {
     return (
       <>
-        <Header />
         <ContentWrapper>
           <WrappedContant />
         </ContentWrapper>

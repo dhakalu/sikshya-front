@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import ShareIcon from '@material-ui/icons/Share'
@@ -15,9 +14,6 @@ import DirectionsIcon from '@material-ui/icons/Directions'
 
 import PropTypes from 'prop-types'
 import { useHistory } from 'react-router-dom'
-
-import CardHeader from '@material-ui/core/CardHeader'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
 
 const useStyles = makeStyles({
   root: {
@@ -32,7 +28,6 @@ const useStyles = makeStyles({
 const SchoolCard = (props) => {
   const classes = useStyles()
   const {
-    loading = false,
     coverImage = 'https://via.placeholder.com/150',
     name = 'Some school',
     pitch = 'This is a sample pitch of the school. School can edit this pitch as they want to. We limit the no of words to 300.',
@@ -85,10 +80,6 @@ const SchoolCard = (props) => {
       </CardActions>
     </Card>
   )
-}
-
-const LoadingCard = () => {
-
 }
 
 export default SchoolCard
